@@ -1,0 +1,289 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass{article}
+
+%%%% MAIN PACKAGE
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+\usepackage[a4paper,top=1cm,bottom=1cm,left=1cm,right=1cm]{geometry}
+%% ---- Chinese ---- %%
+\usepackage{xeCJK}
+\setCJKmainfont{Microsoft JhengHei UI}
+\setCJKmonofont{Microsoft JhengHei UI}
+\setCJKsansfont{Microsoft JhengHei UI}
+
+%% ---- LaTeX syntax utility package ---- %%
+\usepackage{etoolbox}
+
+%% ---- Set up fonts and encoding ---- %%
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+\sloppy
+
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+    BoldFont={Laksaman-Bold.otf}, 
+    ItalicFont={Laksaman-Italic.otf},
+    BoldItalicFont={Laksaman-BoldItalic.otf}
+]{Laksaman.otf}
+\setsansfont{Laksaman.otf}
+\setmonofont{Laksaman.otf}
+\newfontfamily{\thaifont}[
+    Scale=MatchUppercase,
+    Mapping=tex-text,
+    BoldFont={Laksaman-Bold.otf}, 
+    ItalicFont={Laksaman-Italic.otf},
+    BoldItalicFont={Laksaman-BoldItalic.otf}
+]{Laksaman.otf}
+
+% Set environment for Thai fonts
+\newenvironment{thailang}
+{\thaifont}
+{}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setTransitionTo{Thai}{\begin{thailang}}
+\setTransitionFrom{Thai}{\end{thailang}}
+
+%% ---- Load line spacing package ---- %%
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguage{thai}
+\AtBeginDocument\captionsthai  
+
+% Introducing hair space 
+\newrobustcmd{\hrsp}{\ifmmode\mskip1mu\else\kern0.0625em\fi}
+
+\usepackage{url}
+\usepackage{mathptmx}
+\usepackage{fancyvrb}
+\usepackage{hologo}
+\usepackage{fontawesome5}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_Accent}{RGB}{246,103,24}
+
+%%%% Define New Commands
+% \usepackage[style=nature, backend=bibtex]{biblatex}
+\usepackage[style=nature, backend=biber]{biblatex}
+\addbibresource{Publications.bib}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+%%%% Bold Name in Publications
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+\color{UI_Accent} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+% \newcommand{\subtextit}[1]{\vspace{0.15cm}
+% \textit{ #1 \vspace{-0.2cm}} }
+
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{14pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+\author{Chayaphon Piyaphakdeesakun}
+\title{Resume}
+
+\begin{document}
+
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{{\LARGE Chayaphon Piyaphakdeesakun}} &
+            \faPhone $\space$ (+66) 86-562-8233 $\cdot$
+            \faEnvelopeOpenText $\space$ \href{mailto:hello@lxze.me}{hello@lxze.me} \\
+        {林卓偉 $\cdot$ ชยพล ปิยะภักดีสกุล} & \faLinkedin $\space$ \url{https://www.linkedin.com/in/p-chayaphon} \\
+        {\color{UI_Accent} Full-Stack Web Developer, NLP \& Data Engineer} & \faGithub $\space$ \url{https://github.com/LXZE} \\
+    \end{tabular*}
+
+    \begin{center}
+        \vspace{-0.2cm} 
+        {\color{UI_Accent} \hrulefill}
+    \end{center}
+
+    \vspace{-0.25cm}
+    \small{
+        With 7+ years of experience including software \& web development, big data \& cloud computing and research in AI \& NLP field.
+        Possesses a Master's Degree in Computer Engineering and expertise in web, machine learning and big data solution development.
+        % Looking to leverage my knowledge and experience into a role player as a \textbf{Product Engineer} to develop an impactful product for society.
+        Looking forward to leverage my skills and knowledge to solve complex problems and develop an impactful product for society.
+    }
+    \vspace{-0.3cm}
+
+    %-----------EDUCATION-----------------
+    \section{Education}
+        \subsection*{King Mongkut's University of Technology Thonburi (KMUTT) \hfill \normalsize Bangkok, Thailand}
+        \vspace{0.1cm}
+        \subsection*{Master of Engineering, Computer Engineering, {\normalsize \normalfont GPA: 3.66/4.00} \hfill August 2016 --- December 2019} 
+        \vspace{0.1cm}
+        \subsection*{Bachelor of Engineering, Computer Engineering, {\normalsize \normalfont GPA: 3.40/4.00 \small{(Second-class Honour)}} \hfill August 2012 --- May 2016} 
+        \vspace{0.2cm}
+
+    %%%%%%% --------------------------------------------------------------------------------------
+    %%%%%%%  WORK EXPERIENCE
+    %%%%%%% --------------------------------------------------------------------------------------
+    \section{Experience}
+
+        \subsection*{Data Engineer / Python Developer \hfill June 2022 --- Present} 
+        \subtext{Adastra (Thailand) Co., Ltd. {\scriptsize (Global data analytics consulting company)} \hfill Bangkok, Thailand} 
+            \vspace{0.1cm}
+            \begin{zitemize}
+                \item Implemented and enhanced APIs as micro-services for data explorer application and additional features in the central data product library for data mesh architecture.
+                \item Design and developed test for APIs and libraries, increasing and maintaining test coverage to stay above 95\%.
+                % \item Deployed the works on test environment and verified the correctness of the output from APIs and data pipeline.
+                \item Reviewed and refactored existing production code, to improve performance and reduce its cognitive complexity.
+                \item Collaborated with overseas teams in Agile environment for product development and resolved technical impediments promptly.
+                \item Guided and provided deep knowledge in Python, SQL, API and test-driven development for the company's new employees.
+            \end{zitemize}
+
+        \vspace{0.2cm}
+    
+        \subsection*{Full-Stack Software Engineer \hfill July 2020 --- September 2021} 
+        \subtext{Ingarage Assistive Technology Co., Ltd. {\scriptsize (Start-up company focusing on hardware and software development)} \hfill Bangkok, Thailand} 
+            \vspace{0.1cm}
+            \begin{zitemize}
+                \item Designed and developed "low-code" web-based interactive workflow editor, which allows users to create, test and deploy APIs.
+                \item Planned and engineered extendable system architecture and testable codebase.
+                \item Develop automated test cases to verify both the correctness and performance of the code.
+                \item Developed a modular and robust Javascript code generator to serve the application and set up an automated environment to build a container image.
+                \item Implemented fault-tolerant queue system and integration service for deploying containerised APIs on Kubernetes.
+                \item Collaborated with stakeholders directly for robust product improvement.
+            \end{zitemize}
+
+        \vspace{0.2cm}
+    
+        \subsection*{Full-Stack Software Engineer \hfill May 2016 --- May 2018} 
+        \subtext{Big Data Experience Center {\scriptsize (Leading Big Data Services Consultant Center in Thailand)} \hfill Bangkok, Thailand} 
+            \vspace{0.1cm}
+        % { {\small \textbf{Contract with Siam Cement Group {\scriptsize (Largest Cement and Building Material Company in Southeast Asia)}}} }
+        % \vspace{0.3cm}
+        % { {\small \textbf{Contract with Ayudhya Capital Services {\scriptsize (Personal Loan and Credit Card Provider from one of top 5 banks in Thailand)}}} }
+            % \vspace{-0.2cm}
+            \begin{zitemize}
+                \item Built a web application which allows business analysts to upload tabular data to fit several statistical models and validates inferred results, to indicate the most suitable model for each products; resulting in demand prediction with data visualisation.
+                \item Designed and developed APIs for staff developers to query through terabyte-size of financial data from HiveDB.
+                \item Extended APIs to provide extra function storing inquired data into local Hadoop File System for later usage.
+            \end{zitemize}
+
+        % \vspace{0.2cm}
+
+        % \subsection*{Internship \hfill June 2015 --- July 2015} 
+        % \subtext{Universität Bremen \hfill Bremen, Germany} 
+        %     \vspace{0.1cm}    
+        %     \begin{zitemize}
+        %         \item Responsibled for researching and developing the prototype of a visualiser for an interactive device, and the individual IoT project.
+        %     \end{zitemize}
+        
+    %%%%%%% --------------------------------------------------------------------------------------
+    %%%%%%%  AWARDS & HONORS
+    %%%%%%% --------------------------------------------------------------------------------------
+    % \section{Awards \& Honors}
+    % \vspace{-0.2cm}
+    % \begin{tabular}[t]{ p{4em} p{55em}}
+    % \hskills{March 2016} & Honourable Mention Award from Thailand's National Electronics and Computer Technology Center (NECTEC) with Project COCO (Composite of Operation monitoring with social media tracking in Corporation and Optimized managing tools)
+    % \end{tabular} 
+    % \vspace{-0.3cm}
+
+    %%%%%%% --------------------------------------------------------------------------------------
+    %%%%%%%  Projects
+    %%%%%%% --------------------------------------------------------------------------------------
+    \section{Extracurricular Activities} %% (Or "Research", select as appropriate)
+        \subsection*{Teacher Assistant, {\normalsize\normalfont King Mongkut's University of Technology Thonburi} \hfill May 2014 --- May 2019} 
+            \begin{zitemize}
+                \item Assisted in teaching C Programming, Computer Architecture, Software Engineering, Artificial Intelligence and Robot Programming.
+                \item Advised students in classes and evaluated their homework, exams and projects.
+                \item Organised programming workshops for undergraduate college students.
+                \item Designed curriculum for workshop and taught several topics, for instance, Basic Linux, Git, Python and Web Development.
+            \end{zitemize}
+
+    %%%%%%% --------------------------------------------------------------------------------------
+    %%%%%%%  SKILLS
+    %%%%%%% --------------------------------------------------------------------------------------
+    \section{Skills}
+    \begin{tabular}{p{11em} p{1em} p{43em}}
+        \hskills{Technical Skills}&  & Software \& Web Development, Distributed \& Cloud Computing, Data Engineering, Automation, Machine Learning Modeling, Natural Language Processing \\
+        \hskills{Languages} &  & Thai (Native), English (IELTS 7.5), Japanese (JLTP N3), Chinese, German, French (Elementary) \\
+        \hskills{Competencies} &  & Autonomy, Cultural Literacy, Problem Solving, Public Speaking and Teaching, Technical Writing \\
+    \end{tabular}
+    \vspace{-0.2cm}
+
+    %%%%%%% --------------------------------------------------------------------------------------
+    %%%%%%%  PUBLICATIONS
+    %%%%%%% --------------------------------------------------------------------------------------
+    \section{Publications} 
+    \renewcommand\refname{\vskip -1.5em}
+    \nocite{*}
+    \printbibliography[heading=none]
+    \vspace{-0.4cm}
+
+  
+
+\end{document}

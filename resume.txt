@@ -1,0 +1,131 @@
+resume
+- introduce
+- impress
+- distinguish
+
+keyword
+Collaborate and discuss with engineers, planning, technical project manager and elemental technology researchers to determine the priority of service function development.
+Development of tools for developers to use AI products
+Development of tools or components for enterprise customer to adopt AI products in application integration.
+Infrastructure design for providing AI products to the outside (architecture design, capacity design)
+Request new feature or join new feature development of AI products with AI core teams.
+
+font
+serif || sans serif
+
+functional style resume
+= name & contact
+1. name
+2. contact information
+- Bangkok, Thailand, TEL: +66 86 562 8233, E-mail: chayapol.lxze@outlook.com
+3. Linkedin
+4. Github
+
+= summary
+```
+With 4+ years of experience developing web and software, maintaining system, and researching AI project. Possesses a Master Degree in Computer Engineer and expertise in software development and NLP. Looking to leverage my knowledge and experience into a role player as a Product Engineer.
+to develop an impactful product for the society
+```
+
+= work experience
+```
+PROFESSIONAL EXPERIENCE
+
+Ingarage Assistive Technology Co.,Ltd. (Start-up company focusing on hardware and software development for the disabled and enterprises)
+Full-Stack Software Engineer, July 2020 - Present
+- Designed and developed an online interactive workflow editor application that allows enterprise users to create, test and deploy web APIs using a visual programming paradigm.
+- Designed and implemented an extendable and maintainable architecture and backend service for the application. 
+- Developed a modular and robust Javascript code generator to served the application and set up automated environment to build a container image.
+- Implemented integration service to manage deployment queue, and deploy container images to Kubernetes on Azure cloud service.
+- Communicated with client directly 
+for robust product improvement 
+
+
+Big Data Experience Center (Leading Big Data Services Consultant Center in Thailand)
+Full-Stack Software Engineer, May 2016 - May 2018
+Selected contract experiences:
+// Contract with Siam Cement Group (Largest Cement and Building Material Company in Southeast Asia)
+- Built a web application that allows business analysts to upload tabular data to train several Machine Learning models, and evaluates training results to indicate the best suitable model for certain products; resulting in the product’s demand prediction with graph visualisation in real-time.
+// Contract with Ayudhya Capital Services (Personal Loan and Credit Card Provider from Thailand's top 5 bank)
+- Designed and Developed APIs for staff developers to query through the Terabyte-size of financial data from tables in HiveDB.
+- Extended APIs to provide extra function storing the inquired data into local Hadoop File System for later usage.
+```
+
+
+= skill
+```
+Technical Skills
+	- Expert in Software Development System Administration, Automation, Data Cleaning and Manipulation
+	- Proficiency in Machine Learning and Natural Language Processing
+	- Basic knowledge in Linguistics
+
+Language Skills
+	- Native Thai speaker
+	- Fluent in English & Japanese
+	- Elementary Proficiency in Chinese, French and German
+
+Competencies
+	- Fast Learning and Autonomy
+	- Complex Problem Solving
+	- Public Speaking and Teaching
+	- Communication and Networking
+	- Cultural Awareness
+```
+
+Fast Learning and Autonomy
+	- Complex Problem Solving
+	- Public Speaking and Teaching
+	- Communication and Networking
+	- Cultural Awareness
+
+
+= education
+
+King Mongkut's University of Technology Thonburi (KMUTT), Bangkok, Thailand
+- Master of Engineering, Computer Engineering - 3.66/4.00
+August 2016 - December 2019
+- Bachelor of Engineering, Computer Engineering - 3.40/4.00 (Second-class Honour)
+August 2012 - May 2016
+
+Projects
+- AI project
+- NLP project
+- Cryptography project
+- SEIM project
+- Hobby project
+
+Extracurricular Activities 
+- Teacher Assistant in King Mongkut's University of Technology Thonburi 2015 - 2019
+/ Assisted in Teaching C Programming, Computer Architecture, Software Engineering, Artificial Intelligence and Robot Programming
+/ advised and evaluated students' homeworks, exam and projects.
+- Organised Programming Workshops for First and Second year College Students in King Mongkut's University of Technology Thonburi 2014 - 2017
+Designed subjects in the workshop and taught several topics, for instance, Basic Linux, Git, Python and Web Development.
+- Summer Internship at Universität Bremen (Bremen, Germany) June - July 2015
+Responsibled for researching and developing the prototype of a visualiser for an interactive device, and the individual IoT project.
+
+= awards & interest (for CV)
+```
+Publication & Awards
+Publication: Thai Comments Sentiment Analysis on Social Networks with Deep Learning Approach
+Master’s degree thesis (IEEE, June 2019)
+
+Award: Honourable Mention Award Project in COCO (Composite of Operation monitoring with social media tracking in Corporation and Optimized managing tools)
+Bachelor’s degrees graduate project (Thailand's National Electronics and Computer Technology Center (NECTEC), March 2016)
+
+Personal Interests
+- Coding Competition
+- Language Learning
+- Skill Toy (Yoyo, Rubik's Cube)
+- Playing Musical Instruments  (Guitar, Bass)
+- Calligraphy
+- Photograhy
+```
+
+
+
+// stored for other jobs
+
+Pupil labs (Laboratory focusing on developing open source eye-tracking platform and wearable product, HQ in Berlin, Germany), Bangkok, Thailand
+- Created the specialised web application for visualising the eye-tracking data on the modified media player.
+- Integrated an application with Firebase and Google Cloud Services which allow the application to browse and play customised video files from the cloud service directly.
+
